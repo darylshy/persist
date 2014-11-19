@@ -1,7 +1,7 @@
 require 'dm-core'
 require 'dm-migrations'
 
-DataMapper.setup(:default, 'sqlite3://#{Dir.pwd}/development.db')
+DataMapper.setup(:default, 'sqlite3:development.db')
 
 class Song
   include DataMapper::Resource
@@ -11,4 +11,5 @@ class Song
   property :length, Integer
   property :released_on, Date
 end
+
 DataMapper.finalize
